@@ -19,20 +19,34 @@
         <div class="row">
             <div class="col-12">
                 <div class="callout callout-info">
-                    <h6>Todays Date:</h6>
+                    <h6>Todays Date: <?php echo date('l - jS F Y') ?></h6>
                     <h6>Current Roll Date:</h6>
-                    <h6 style="color:red;">Monthly Reports are Due</h6>
                 </div>
 
             </div>
         </div>
+
+        @if ($monthlyreports == "Y")
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h5>
+                            <i class="icon fas fa-exclamation-triangle"></i>
+                            Alert!
+                        </h5>
+                        Monthly Reports need to be completed.
+                    </div>
+                </div>
+            </div>
+        @endif
 
         <div class="row">
 
             <div class="col-lg-3 col-sm-6">
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>50</h3>
+                        <h3>{{ $members->count() }}</h3>
                         <p>Members on Roll</p>
                     </div>
                     <div class="icon">
@@ -45,7 +59,7 @@
             <div class="col-lg-3 col-sm-6">
                  <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>50</h3>
+                        <h3>{{ $monthlyreports }}</h3>
                         <p>Members Present</p>
                     </div>
                     <div class="icon">
