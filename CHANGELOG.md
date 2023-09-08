@@ -1,6 +1,12 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/laravel/compare/v10.2.5...10.x)
+## [Unreleased](https://github.com/laravel/laravel/compare/V4.0.0...master)
+
+## [V4.0.0](https://github.com/laravel/laravel/compare/v10.2.5...V4.0.0) - 2023-09-08
+
+Complete Re-design of Squadron Admin Page.
+Laravel will be upgraded to the Latest Version
+New Look and Feel from using AdminLTE Template (Open Source HTML Template)
 
 ## [v10.2.5](https://github.com/laravel/laravel/compare/v10.2.4...v10.2.5) - 2023-06-30
 
