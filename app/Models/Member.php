@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
+use App\Models\Roll;
+use App\Models\Rollmapping;
+use App\Models\Srequest;
+use App\Models\Flight;
+use App\Models\Points;
+use App\Models\Eventroll;
+use App\Models\Events;
+
 class Member extends Model
 {
     use HasFactory;
