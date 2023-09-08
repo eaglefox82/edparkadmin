@@ -213,13 +213,13 @@ return [
 
     'sidebar_mini' => 'lg',
     'sidebar_collapse' => false,
-    'sidebar_collapse_auto_size' => false,
+    'sidebar_collapse_auto_size' => true,
     'sidebar_collapse_remember' => true,
     'sidebar_collapse_remember_no_transition' => true,
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 100,
+    'sidebar_nav_animation_speed' => 1000,
 
     /*
     |--------------------------------------------------------------------------
@@ -292,55 +292,47 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
+
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
 
         [
-            'text'        => 'Member',
+            'text'        => 'Members',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fas fa-users',
         ],
 
         [
             'text'        => 'Roll',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fas fa-book',
         ],
 
         [
             'text'        => 'Squadron Events',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fas fa-calendar',
         ],
 
         [
             'text'        => 'Squadron Accounting',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fas fa-money-bill',
         ],
 
         [
             'text'        => 'Reports',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fas fa-paperclip',
         ],
 
         [
             'text'      => 'Other Items',
-            'icon'      => 'far fa-fw fa-file',
+            'icon'      => 'far fa-fw fas fa-wrench',
             'submenu'   => [
                 [
                     'text'  => 'NAS',
