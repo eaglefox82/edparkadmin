@@ -15,7 +15,21 @@ return new class extends Migration
             $table->id();
             $table->integer('member_id');
             $table->integer('inspection_id');
-            $table->integar('points_lost');
+            $table->integar('membership_card');
+            $table->integar('cap');
+            $table->integar('cap_badge');
+            $table->integar('hair');
+            $table->integar('shirt');
+            $table->integar('badges');
+            $table->integar('lanyard');
+            $table->integar('buttons');
+            $table->integar('trousers');
+            $table->integar('belt');
+            $table->integar('shoes');
+            $table->integar('socks');
+            $table->integar('tie');
+            $table->integar('tie_pin');
+            $table->integar('bearing');
             $table->timestamps();
         });
     }

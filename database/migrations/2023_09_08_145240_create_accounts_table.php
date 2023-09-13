@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-             $table->string('member_id');
+            $table->string('member_id');
             $table->decimal('amount', 5,2);
             $table->string('Reason');
             $table->timestamps();

@@ -253,7 +253,7 @@ return [
     |
     */
 
-    'use_route_url' => false,
+    'use_route_url' => true,
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
@@ -302,7 +302,7 @@ return [
 
         [
             'text'        => 'Members',
-            'url'         => 'admin/pages',
+            'route'       => 'member.index',
             'icon'        => 'far fa-fw fas fa-users',
         ],
 
@@ -328,6 +328,12 @@ return [
             'text'        => 'Reports',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fas fa-paperclip',
+        ],
+
+        [
+            'text'        => 'Uniforms',
+            'route'       => 'uniforminspection.index',
+            'icon'        => 'far fa-fw fas fa-tshirt',
         ],
 
         [
