@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Members')
 
 @section('content_header')
     <div align="Center">
@@ -28,7 +28,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ $members->where('gender', 'M')->count() }}</h3>
+                        <h3>{{ $members->where('gender', 'M')->count() }} <small>( {{ ($members->where('gender', 'M')->count() / $members->count() )*100}}%)</small></h3>
                         <p>Male Members</p>
                     </div>
                     <div class="icon">
@@ -40,7 +40,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="small-box bg-fuchsia">
                     <div class="inner">
-                        <h3>{{ $members->where('gender', 'F')->count() }}</h3>
+                        <h3>{{ $members->where('gender', 'F')->count() }} <small>( {{ ($members->where('gender', 'F')->count() / $members->count() )*100}}%)</small></h3>
                         <p>Female Members</p>
                     </div>
                     <div class="icon">

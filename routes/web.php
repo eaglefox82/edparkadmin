@@ -18,4 +18,5 @@ Route::get('/', [HomeController::class, 'index'])->name("home");
 
 //Add Member Resource Controller
 Route::resource('member', 'App\Http\Controllers\MemberController');
-Route::resource('uniforminspections', 'App\Http\Controllers\UniformController');
+//Add Uniform Inspection Resource Controller
+Route::resource('uniforminspection', 'App\Http\Controllers\UniforminspectionController');

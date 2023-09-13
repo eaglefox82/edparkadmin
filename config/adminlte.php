@@ -219,7 +219,7 @@ return [
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 1000,
+    'sidebar_nav_animation_speed' => 350,
 
     /*
     |--------------------------------------------------------------------------
@@ -331,7 +331,7 @@ return [
         ],
 
         [
-            'text'        => 'Uniforms',
+            'text'        => 'Uniform Inspections',
             'route'       => 'uniforminspection.index',
             'icon'        => 'far fa-fw fas fa-tshirt',
         ],
