@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\AAL\NasApiController;
-use App\Http\Controllers\SiteController;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,28 +10,25 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
-//Import Authentication Routes
-require __DIR__.'/auth.php';
+Route::get('/', [HomeController::class, 'index'])->name("home");
 
-//Protect all routes with authentication using this group
-Route::middleware(['auth:sanctum'])->group(static function(){
-    Route::get('/', [SiteController::class, 'home'])->name('home');
-    Route::get('aal/nas_sync', [NasApiController::class, 'syncNasData'])->name('aal.nas.sync');
-    Route::get('migrate', function () {
-        Artisan::call('migrate');
+//Resource Controllers
+Route::resource('member', 'App\Http\Controllers\MemberController');
+Route::resource('uniforminspection', 'App\Http\Controllers\UniforminspectionController');
+Route::resource('roll', 'App\Http\Controllers\RollController');
 
-        return "Database Migration Success";
-    });
-    Route::get('addRoles', [SiteController::class, 'addRoles']);
-    Route::get('updateAccounts', [SiteController::class, 'updateAccounts']);
+//Get Requests for Datatables
+Route::get('members', [MemberController::class, 'getmembers'])->name('member.getmembers');
 
-    //Import Event Routes
-    require __DIR__.'/events/events.php';
+
+
+//Deployment - Use this to run migrations on the server
+Route::get('/deployment', function () {
+    Artisan::call('migrate');
+    return 'Migrations ran successfully';
 });
-
-
